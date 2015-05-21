@@ -28,8 +28,9 @@ np_inc = [os.path.join(np_lib, 'core/include')]
 
 setup(
     name='spectral',
-    version='0.1.8',
-    description=('Python package for extracing spectral features from speech.'),
+    version='0.1.7',
+    description=('Python package for extracing Mel '
+                 'and MFCC features from speech.'),
     long_description=readme,
     author='Maarten Versteegh',
     author_email='maartenversteegh@gmail.com',
@@ -59,4 +60,5 @@ setup(
                            include_dirs=py_inc + np_inc,)],
     include_dirs=[numpy.get_include(),
                   os.path.join(numpy.get_include(), 'numpy')],
+    test_suite='tests',
 )
