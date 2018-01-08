@@ -261,7 +261,7 @@ class Spectral(object):
             c = np.zeros((nfr, self.ncep))
         else:
             c = np.zeros((nfr, self.nfilt))
-        for fr in xrange(nfr):
+        for fr in range(nfr):
             start = int(round(fr * self.fshift))
             end = min(len(sig), start + self.wlen_samples)
             frame = sig[start:end]
